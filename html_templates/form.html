@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Config Search</title>
+</head>
+<body>
+
+<p>Hi, {{ user }} </p>
+<p>Total Index Object Count: {{ index_object_count }}</p>
+
+<br/>
+
+<form method="post">
+    <input type="search" name="query" value="{{ query }}" size=50 />
+    <input type="submit" value="Search">
+</form>
+<p>======= Results =======</p>
+
+{% for line in result %}
+    <p> {{ line }} </p>
+{% endfor %}
+
+</body>
+</html>
